@@ -1,0 +1,13 @@
+<h1>Your Groups</h1>
+<div class="col-xs-12 col-sm-3 col-md-2">
+  <button class="btn btn-primary btn-block margin-one" data-toggle="modal" data-target="#newGroup">New Group</button>
+  <div class="list-group">
+    {{#each model as |group|}}
+      {{#link-to "groups.group" group class="list-group-item"}}{{group.groupName}}{{/link-to}}
+    {{/each}}
+  </div>
+</div>
+<div class="col-xs-12 col-sm-9 col-md-10">
+  {{outlet}}
+</div>
+{{new-group-dialog}}

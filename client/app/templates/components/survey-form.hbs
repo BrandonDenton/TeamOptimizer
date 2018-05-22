@@ -1,0 +1,7 @@
+<form>
+  <div class="list-group">
+    {{#each model as |survey|}}
+        {{#link-to "survey.grabsurvey" survey class="list-survey-item"}}{{survey.survey}}{{/link-to}}
+    {{/each}}
+  </div>
+</form>

@@ -1,0 +1,63 @@
+@import "bootstrap.less";
+@import "variables.less";
+@import "bootswatch.less";
+@import "material-icons.less";
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700);
+
+@brand-primary: #FF5722;
+@headings-font-family: 'Roboto Condensed', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+.navbar, .navbar-brand, .btn, h1, h2, h3, h4, h5, h6, .label, dt, label {
+  font-family: @headings-font-family;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 5rem; //shrink <h1>'s a bit because they are HUGE with uppercase
+  margin-bottom: 23px; // make the bottom margin match Bootstrap's default top margin
+}
+
+// sticky footer from http://getbootstrap.com/examples/sticky-footer-navbar/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 110px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 110px;
+  // background-color: #f5f5f5;
+  padding-top: 1em;
+}
+
+body > .ember-view > .container {
+  padding-top: 70px;
+}
+
+.footerNav {
+  a {
+    .text-muted();
+  }
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.margin-one {
+  margin-bottom: 1rem;
+}

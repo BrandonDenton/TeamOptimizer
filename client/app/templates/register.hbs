@@ -1,0 +1,32 @@
+<h1>Sign Up</h1>
+{{#if errorMessage}}
+  <div class="alert alert-warning" role="alert">{{errorMessage}}</div>
+{{/if}}
+<form {{action "signUp" on="submit"}} class="margin-one">
+  <div class="form-group">
+    <label for="fullName">Full Name</label>
+    {{input id="fullName" class="form-control" type="text" value=fullName}}
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    {{input id="email" class="form-control" type="email" value=email}}
+  </div>
+  <div class="form-group">
+    <label for="mbti"><abbr title="Myers-Briggs Type Indicator">MBTI</abbr></label>
+    <select onchange={{action "selectMBTI" value="target.value"}} class="form-control">
+      {{#each mbtiTypes as |type|}}
+        <option value={{type}}>{{type}}</option>
+      {{/each}}
+    </select>
+    <span class="help-text">Your Myers-Briggs personality type. If you don't know your personality type, take a survey online <a href="http://www.truity.com/test/type-finder-research-edition" target="_blank">here</a>.</span>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    {{input id="password" class="form-control" type="password" value=password}}
+  </div>
+  <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>
+<p>
+	Already a member? {{#link-to "login"}}Log In{{/link-to}}
+</p>
+{{outlet}}
