@@ -1,2 +1,5 @@
-# TeamOptimizer
-This repo contains a project for the Software Engineering course (COSC 340) at the University of Tennessee, constructed by Xiao Zhou, Matt Shindala, Annika Jusino, and Brandon Denton.
+# Team Optimizer
+
+Team Optimizer sorts people into diverse groups.
+
+The project is divided into two folders - frontend code is in `client` and backend code is in `server`. See the `README.md` in each for more information.
